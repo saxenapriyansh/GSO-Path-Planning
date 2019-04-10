@@ -3,7 +3,6 @@ import time
 import os
 import subprocess
 import multiprocessing
-import resource
 from math import isinf, sqrt, pi
 import numpy as np
 import matplotlib.pyplot as plt

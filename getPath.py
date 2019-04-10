@@ -36,7 +36,7 @@ def getPath(map_, StartNode, GoalNode, nodes, sizeX, sizeY,sizeZ):
 
         temp = []
         for i in ViableNeighbours:
-            if i in prevNode:
+            if i == prevNode:
                 temp.append(i)
         ViableNeighbours = temp
 
