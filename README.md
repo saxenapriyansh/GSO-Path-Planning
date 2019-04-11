@@ -1,2 +1,2 @@
-# GSO-Path-Planning
-3D path planning using GSO
+# Path-Planning
+3D path planning using GSO, IWO, BBO
