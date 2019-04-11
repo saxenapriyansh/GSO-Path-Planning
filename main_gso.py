@@ -2,13 +2,13 @@ from __future__ import division
 import time
 import os
 import subprocess
-import multiprocessing
 from math import isinf, sqrt, pi
 import numpy as np
 import matplotlib.pyplot as plt
 import config_user as gl
 import config_program
 import all_functions as fcn
+import GSO
 
 
 # To reload settings for multiple trials
@@ -48,11 +48,12 @@ for idx in xrange(0, gl.numGoals):                      # for each goal
 
         """ Compute path, smooth it, make a spline, and divide into a series of adjacent points to follow """
         tic = time.clock()    # start timer
+        path = GSO.run_gso(gl.start, gl.goal)
+        path.reverse()
 
-        path = fcn.findPath(L)
-        path = fcn.postSmoothPath(path)
-        path = fcn.CatmullRomSpline(path)
-        path = fcn.simulateUAVmovement(path)
+        # path = fcn.postSmoothPath(path)
+        # path = fcn.CatmullRomSpline(path)
+        # path = fcn.simulateUAVmovement(path)
 
         findPathTime = time.clock() - tic   # end timer
         time_findPath.append(findPathTime)  # record time

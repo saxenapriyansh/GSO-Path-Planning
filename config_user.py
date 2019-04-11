@@ -32,14 +32,14 @@ sizeX = 64
 sizeY = 64
 sizeZ = 64
 
-mapscale = 2
+mapscale = 1
 start = (3*mapscale , 3*mapscale, 6*mapscale) # start coordinates
-goals = np.array([[62., 62., 6.,    0.]])  * mapscale # goal coordinates
+goals = np.array([[18., 16., 19.,    0.]])  * mapscale # goal coordinates
 
 # Configure Moving Goals
-initX = [60, 20]# [12, 6]
-initY = [50, 50]#[3, 2]
-initZ = [6, 6]#[4, 7]
+initX = [4, 7]# [12, 6]
+initY = [2, 5]#[3, 2]
+initZ = [3, 2]#[4, 7]
 T = [5, 4]#[5, 2]
 
 # Fixed Individual Obstacles

@@ -6,11 +6,8 @@ from getPath import getPath
 from removeLoops import removeLoops
 from pdist2 import pdist2
 from calc_turns import calc_turns
+import config_user as gl
 
-
-#####################################
-sizeX, sizeY, sizeZ = 20, 20, 20
-#####################################
 
 
 
@@ -18,7 +15,6 @@ def changePath(map_, weakSol, strongSol, GoalNode, nodes):
     k1 = 1
     k2 = 80
     k3 = 0.3
-
 
     if strongSol:
         C = [value for value in weakSol if value in strongSol]
@@ -50,12 +46,12 @@ def changePath(map_, weakSol, strongSol, GoalNode, nodes):
             while cNode != sNode and counter <= Mcounter:
                 pos2 = int(math.floor(random.random() * spath2))
                 sNode = strongSol[pos2]
-                tpath, cNode, _ = getPath(map_, wNode, sNode, math.ceil(nodes / 2), sizeX, sizeY,sizeZ)
+                tpath, cNode, _ = getPath(map_, wNode, sNode, math.ceil(nodes / 2), gl.sizeX, gl.sizeY, gl.sizeZ)
                 counter = counter + 1
 
             if counter <= Mcounter:
                 newpath.extend(tpath[1:])
-                tpath, _, _ = getPath(map_, sNode, GoalNode, math.ceil(nodes / 2), sizeX, sizeY,sizeZ)
+                tpath, _, _ = getPath(map_, sNode, GoalNode, math.ceil(nodes / 2), gl.sizeX, gl.sizeY, gl.sizeZ)
                 newpath.extend(tpath[1:])
             else:
                 newpath = weakSol
@@ -78,13 +74,13 @@ def changePath(map_, weakSol, strongSol, GoalNode, nodes):
         sNode = GoalNode
 
         while cNode != sNode and counter <= Mcounter:
-            sNode = (int(np.random.random()*sizeX), int(np.random.random()*sizeY), int(np.random.random()*sizeZ))
-            tpath, cNode, _ = getPath(map_, wNode, sNode, math.ceil(nodes / 2), sizeX, sizeY,sizeZ)
+            sNode = (int(np.random.random() * gl.sizeX), int(np.random.random() * gl.sizeY), int(np.random.random() * gl.sizeZ))
+            tpath, cNode, _ = getPath(map_, wNode, sNode, math.ceil(nodes / 2), gl.sizeX, gl.sizeY, gl.sizeZ)
             counter = counter + 1
 
         if counter <= Mcounter and tpath:
             newpath.extend(tpath[1:])
-            tpath, _, _ = getPath(map_, sNode, GoalNode, math.ceil(nodes / 2), sizeX, sizeY,sizeZ)
+            tpath, _, _ = getPath(map_, sNode, GoalNode, math.ceil(nodes / 2), gl.sizeX, gl.sizeY, gl.sizeZ)
             newpath.extend(tpath[1:])
         else:
             newpath = weakSol
