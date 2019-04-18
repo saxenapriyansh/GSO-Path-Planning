@@ -10,7 +10,8 @@ import all_functions as fcn
 # Create local copies of constants
 sizeX, sizeY, sizeZ, zMove = gl.sizeX, gl.sizeY, gl.sizeZ, gl.sizeX * gl.sizeY
 rXstart, rYstart, rZstart, rXdim, rYdim, rZdim = gl.rXstart, gl.rYstart, gl.rZstart, gl.rXdim, gl.rYdim, gl.rZdim
-
+obsX, obsY, obsZ = gl.obsX, gl.obsY, gl.obsZ
+staticX, staticY, staticZ = gl.staticX, gl.staticY, gl.staticZ
 
 # Add moving goals to goals array
 if gl.initX:
@@ -22,6 +23,17 @@ if gl.initX:
     gl.goals = np.vstack((gl.goals, newgoals))
 
 gl.numGoals = gl.goals.shape[0]
+
+if gl.obsX:
+    newobs = np.zeros((len(gl.obsX), 4))
+    for w in xrange(0, len(gl.obsX)):
+        newobs[w, 0] = gl.obsX[w]
+        newobs[w, 1] = gl.obsY[w]
+        newobs[w, 2] = gl.obsZ[w]
+    gl.obs = np.vstack((gl.obs, newobs))
+
+
+gl.numobs = gl.obs.shape[0]
 
 # First goal is that with shortest Euclidean distance
 hyp = []
@@ -46,6 +58,11 @@ for i in xrange(0, gl.numGoals):
     gl.goals[i, 3] = fcn.cantor(gX, gY, gZ)
 
 gl.goal = (gl.goals[goalindex,0], gl.goals[goalindex,1], gl.goals[goalindex,2])
+
+
+for i in xrange(0, gl.numobs):
+    gX, gY, gZ = gl.obs[i, 0], gl.obs[i, 1], gl.obs[i, 2]
+    gl.obs[i, 3] = fcn.cantor(gX, gY, gZ)
 
 
 # Generating random fixed obstacles
@@ -96,7 +113,19 @@ if gl.makeFigure:
     for idx,eachgoal in enumerate(gl.goals):
         # This is done to save and remove scatter points for moving goals
         q = eachgoal[-1]
-        gl.goalhandles[q] = gl.ax1.scatter(eachgoal[0], eachgoal[1], eachgoal[2], c='r')
+        if q == fcn.cantor(staticX, staticY, staticZ):
+            gl.goalhandles[q] = gl.ax1.scatter(eachgoal[0], eachgoal[1], eachgoal[2], c='b')
+        else:
+            gl.goalhandles[q] = gl.ax1.scatter(eachgoal[0], eachgoal[1], eachgoal[2], c='r')
+
+
+    gl.obshandles = {}
+    for idx,eachobs in enumerate(gl.obs):
+        #print eachgoal
+        # This is done to save and remove scatter points for moving goals
+        r = eachobs[-1]
+        r=(int)(r)
+        gl.obshandles[r] = gl.ax1.scatter(eachobs[0], eachobs[1], eachobs[2], c='k')
 
     # Plot individual obstacles
     for idx, obs in enumerate(gl.obstacles):
@@ -113,7 +142,14 @@ for i in xrange(0,len(rXstart)):
 
     gl.obstacles.extend(rLoc)
 
+
+for i in xrange(0,len(obsX)):
+    rLoc = fcn.rectObs(obsX[i], obsY[i], obsZ[i], 0, 0, 0)
+    gl.obstacles.extend(rLoc)
+
 gl.number_of_obstacles = len(gl.obstacles)
+
+
 
 
 # Update cost matrix if needed

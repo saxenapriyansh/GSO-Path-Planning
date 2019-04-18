@@ -77,19 +77,19 @@ def succ(s):
     ]
 
     # Nodes to delete when on a boundary
-    if x == sizeX:
+    if x == sizeX - 1:
         sDel += 1,2,3,10,11,12,18,19,20
-    elif x == 1:
+    elif x == 0:
         sDel +=5,6,7,14,15,16,22,23,24
 
-    if y == sizeY:
+    if y == sizeY - 1:
         sDel += 0,1,7,9,10,16,17,18,24
-    elif y == 1:
+    elif y == 0:
         sDel += 3,4,5,12,13,14,20,21,22
 
-    if z == sizeZ:
+    if z == sizeZ - 1:
         sDel += 17,18,19,20,21,22,23,24,25
-    elif z == 1:
+    elif z == 0:
         sDel += 0,1,2,3,4,5,6,7,8
 
     if sDel:
@@ -374,6 +374,28 @@ def genRandObs(minObs, maxObs, maxPercent, seed):
         if makeFigure:
             plotRectObs(newX, newY, newZ, 1, 1, 1, 0.2, gl.ax1)
 
+def movingObs(obsX, obsY, obsZ, T_obs):
+    if gl.stepCount % T_obs ==0:
+        q = cantor(obsX, obsY, obsZ)
+        idx = np.where(gl.obs[:, 3] == q)[0][0]
+        mgs_old = (gl.obs[idx, 0], gl.obs[idx, 1], gl.obs[idx, 2])          # get current node number of that goal
+        random.seed(q + 5 )
+        #gl.obstacles.remove(mgs_old)
+        mgs = random.choice(succ(mgs_old))                                  # pick random successor to move to
+        newseed = q + 4
+        while mgs in gl.goals:
+            # pick another random successor if we end up in an goal
+            random.seed(newseed)
+            mgs = random.choice(succ(mgs_old))
+            newseed += 1
+        mgx, mgy, mgz = mgs
+        gl.obs[idx, 0:3] = mgx, mgy, mgz
+        if makeFigure:
+            gl.obshandles[q].remove()                                      # remove scatter point and add new one
+            gl.obshandles[q] = gl.ax1.scatter(mgx, mgy, mgz, c='k')
+            gl.map_[mgs_old] = 0           # 0 indicates no obstacle
+            gl.map_[mgs] = -2              # -2 indicated undetected obstacle
+        return True
 
 def movingGoal(initX, initY, initZ, T):
     """
@@ -383,33 +405,35 @@ def movingGoal(initX, initY, initZ, T):
     :return: 1. Moves the goal specified by input parameters; 2. boolean, whether or not current goal has moved
     """
     goalMoved = False
-    if gl.stepCount % T == 0:  # move every T iterations
 
-        q = cantor(initX, initY, initZ)                                     # find unique cantor id
-        if q in gl.goalsVisited:                                            # break if we've visited this goal already
-            return
-        idx = np.where(gl.goals[:, 3] == q)[0][0]                           # get current location of goal
-        mgs_old = (gl.goals[idx, 0], gl.goals[idx, 1], gl.goals[idx, 2])    # get current node number of that goal
+    if (initX, initY, initZ) in gl.goalhandles:
+        if gl.stepCount % T == 0:  # move every T iterations
 
-        random.seed(q+3)
-        mgs = random.choice(succ(mgs_old))                                  # pick random successor to move to
-        newseed = q + 4
-        while mgs in gl.obstacles:
-            # pick another random successor if we end up in an obstacle
-            random.seed(newseed)
-            mgs = random.choice(succ(mgs_old))
-            newseed += 1
+            q = cantor(initX, initY, initZ)                                     # find unique cantor id
+            if q in gl.goalsVisited:                                            # break if we've visited this goal already
+                return
+            idx = np.where(gl.goals[:, 3] == q)[0][0]                           # get current location of goal
+            mgs_old = (gl.goals[idx, 0], gl.goals[idx, 1], gl.goals[idx, 2])    # get current node number of that goal
 
-        mgx, mgy, mgz = mgs                                                 # get coordinates of that location
-        gl.goals[idx, 0:3] = mgx, mgy, mgz                                  # update location of node in goals array
+            random.seed(q+3)
+            mgs = random.choice(succ(mgs_old))                                  # pick random successor to move to
+            newseed = q + 4
+            while mgs in gl.obstacles:
+                # pick another random successor if we end up in an obstacle
+                random.seed(newseed)
+                mgs = random.choice(succ(mgs_old))
+                newseed += 1
 
-        if mgs_old == gl.goal:                                      # if old goal was current goal, update current goal
-            gl.goal = mgs
-            goalMoved = True
+            mgx, mgy, mgz = mgs                                                 # get coordinates of that location
+            gl.goals[idx, 0:3] = mgx, mgy, mgz                                  # update location of node in goals array
 
-        if makeFigure:
-            gl.goalhandles[q].remove()                                      # remove scatter point and add new one
-            gl.goalhandles[q] = gl.ax1.scatter(mgx, mgy, mgz, c='r')
+            if mgs_old == gl.goal:                                      # if old goal was current goal, update current goal
+                gl.goal = mgs
+                goalMoved = True
+
+            if makeFigure:
+                gl.goalhandles[q].remove()                                      # remove scatter point and add new one
+                gl.goalhandles[q] = gl.ax1.scatter(mgx, mgy, mgz, c='r')
 
     return goalMoved
 
@@ -460,37 +484,29 @@ def searchAndUpdate(xNew,yNew,zNew,*args):
     searchRange = []
     sr_append = searchRange.append
     x,y,z = int(round(xNew)), int(round(yNew)), int(round(zNew))
-    xmin, xmax = max(x-sr, 1), min(x+sr, sizeX)
-    ymin, ymax = max(y-sr, 1), min(y+sr, sizeY)
-    zmin, zmax = max(z-sr, 1), min(z+sr, sizeZ)
+    xmin, xmax = max(x-sr, 0), min(x+sr, sizeX - 1)
+    ymin, ymax = max(y-sr, 0), min(y+sr, sizeY - 1)
+    zmin, zmax = max(z-sr, 0), min(z+sr, sizeZ - 1)
 
     """ Get nodes that make up the 6 faces """
 
     # Face 1: vary x,y at zmin
-    [sr_append((dx,dy,zmin)) for dx in xrange(xmin, xmax+1) for dy in xrange(ymin, ymax+1)]
+    [sr_append((dx,dy,zmin)) for dx in xrange(xmin, xmax) for dy in xrange(ymin, ymax)]
     # Face 2: vary x,y at zmax
-    [sr_append((dx,dy,zmax)) for dx in xrange(xmin, xmax+1) for dy in xrange(ymin, ymax+1)]
+    [sr_append((dx,dy,zmax)) for dx in xrange(xmin, xmax) for dy in xrange(ymin, ymax)]
     # Face 3: vary x,z at ymin
-    [sr_append((dx,ymin,dz)) for dx in xrange(xmin, xmax+1) for dz in xrange(zmin, zmax+1)]
+    [sr_append((dx,ymin,dz)) for dx in xrange(xmin, xmax) for dz in xrange(zmin, zmax)]
     # Face 4: vary x,z at ymax
-    [sr_append((dx,ymax,dz)) for dx in xrange(xmin, xmax+1) for dz in xrange(zmin, zmax+1)]
+    [sr_append((dx,ymax,dz)) for dx in xrange(xmin, xmax) for dz in xrange(zmin, zmax)]
     # Face 5: vary y,z at xmin
-    [sr_append((xmin,dy,dz)) for dy in xrange(ymin, ymax+1) for dz in xrange(zmin, zmax+1)]
+    [sr_append((xmin,dy,dz)) for dy in xrange(ymin, ymax) for dz in xrange(zmin, zmax)]
     # Face 6: vary y,z at xmax
-    [sr_append((xmax,dy,dz)) for dy in xrange(ymin, ymax+1) for dz in xrange(zmin, zmax+1)]
+    [sr_append((xmax,dy,dz)) for dy in xrange(ymin, ymax) for dz in xrange(zmin, zmax)]
 
     """ Run line-of-sight checks """
     for node in searchRange:
-        # Bound Check
-        if x >= sizeX: x = sizeX - 1
-        if y >= sizeY: y = sizeY - 1
-        if z >= sizeZ: z = sizeZ - 1
+        los, blkdNode = lineOfSight4SAU((x, y, z), node)
 
-        if node[0] >= sizeX: node[0] = sizeX - 1
-        if node[1] >= sizeY: node[1] = sizeY - 1
-        if node[2] >= sizeZ: node[2] = sizeZ - 1
-
-        los, blkdNode = lineOfSight4SAU((x,y,z), node)
         if not los:
             cellappend(blkdNode)
             gl.costMatrix[blkdNode] = float('inf')
@@ -800,19 +816,19 @@ def succ6(s):
     ]
 
     # Nodes to delete when on a boundary
-    if x == sizeX:
+    if x == sizeX - 1:
         sDel.append(2)
-    elif x == 1:
+    elif x == 0:
         sDel.append(4)
 
-    if y == sizeY:
+    if y == sizeY - 1:
         sDel.append(1)
-    elif y == 1:
+    elif y == 0:
         sDel.append(3)
 
-    if z == sizeZ:
+    if z == sizeZ -1:
         sDel.append(5)
-    elif z == 1:
+    elif z == 0:
         sDel.append(0)
 
     if sDel:
@@ -1065,19 +1081,19 @@ class CL:   # Create level
             sDel += 8, 25
 
         # Nodes to delete when on a boundary
-        if x > sizeX - self.lengthX:
+        if x > (sizeX - 1) - self.lengthX:
             sDel += 1,2,3,10,11,12,18,19,20
-        elif x < 1 + self.lengthX:
+        elif x < 0 + self.lengthX:
             sDel +=5,6,7,14,15,16,22,23,24
 
-        if y > sizeY - self.lengthY:
+        if y > sizeY - 1 - self.lengthY:
             sDel += 0,1,7,9,10,16,17,18,24
-        elif y < 1 + self.lengthY:
+        elif y < 0 + self.lengthY:
             sDel += 3,4,5,12,13,14,20,21,22
 
-        if z > sizeZ - self.lengthZ:
+        if z > sizeZ - 1 - self.lengthZ:
             sDel += 17,18,19,20,21,22,23,24,25
-        elif z < 1 + self.lengthZ:
+        elif z < 0 + self.lengthZ:
             sDel += 0,1,2,3,4,5,6,7,8
 
         if sDel:

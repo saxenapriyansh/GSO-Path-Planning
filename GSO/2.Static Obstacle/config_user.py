@@ -10,14 +10,18 @@ from mpl_toolkits.mplot3d import Axes3D
 testingMode = False             # suppresses figure generation, outputs from main*.py are not printed
 
 makeFigure = True
-makeMovie = False
+makeMovie = True
 startWithEmptyMap = True
 makeRandObs = False
+useMovingObs = False
 useMovingGoals = True
 restrictVerticalMovement = True
 useHierarchicalPlanning = True
 numHierLevels = 0
 
+######################################
+staticX, staticY, staticZ = 15, 10, 13
+######################################
 
 percentFixedRandomObstacles = 0
 safetymargin = 1
@@ -34,12 +38,12 @@ sizeZ = 64
 
 mapscale = 1
 start = (3*mapscale , 3*mapscale, 6*mapscale) # start coordinates
-goals = np.array([[18., 16., 19.,    0.]])  * mapscale # goal coordinates
+goals = np.array([[62., 62., 6.,    0.], [staticX, staticY, staticZ, 0.]]) * mapscale  # goal coordinates
 
 # Configure Moving Goals
-initX = [4, 7]# [12, 6]
-initY = [2, 5]#[3, 2]
-initZ = [3, 2]#[4, 7]
+initX = [60, 20]# [7, 6]
+initY = [50, 50]#[5, 2]
+initZ = [6, 6]#[2, 7]
 T = [5, 4]#[5, 2]
 
 # Fixed Individual Obstacles
@@ -59,7 +63,7 @@ rZdim   = [30,  8, 15, 28, 20, 28]
 # rYdim   = []
 # rZdim   = []
 
-vidname = 'dstarVid'
+vidname = '2.GSOVid'
 fps = 10                 # higher = faster playback speed
 dpi = 500               # higher = better quality, slower runtime
 imgformat = 'png'       # currently only works for png

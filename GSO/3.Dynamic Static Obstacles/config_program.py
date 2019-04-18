@@ -10,7 +10,7 @@ import all_functions as fcn
 # Create local copies of constants
 sizeX, sizeY, sizeZ, zMove = gl.sizeX, gl.sizeY, gl.sizeZ, gl.sizeX * gl.sizeY
 rXstart, rYstart, rZstart, rXdim, rYdim, rZdim = gl.rXstart, gl.rYstart, gl.rZstart, gl.rXdim, gl.rYdim, gl.rZdim
-
+staticX, staticY, staticZ = gl.staticX, gl.staticY, gl.staticZ
 
 # Add moving goals to goals array
 if gl.initX:
@@ -96,8 +96,11 @@ if gl.makeFigure:
     for idx,eachgoal in enumerate(gl.goals):
         # This is done to save and remove scatter points for moving goals
         q = eachgoal[-1]
-        gl.goalhandles[q] = gl.ax1.scatter(eachgoal[0], eachgoal[1], eachgoal[2], c='r')
-
+        if q == fcn.cantor(staticX, staticY, staticZ):
+            gl.goalhandles[q] = gl.ax1.scatter(eachgoal[0], eachgoal[1], eachgoal[2], c='b')
+        else:
+            gl.goalhandles[q] = gl.ax1.scatter(eachgoal[0], eachgoal[1], eachgoal[2], c='r')
+    
     # Plot individual obstacles
     for idx, obs in enumerate(gl.obstacles):
         fcn.plotRectObs(obs[0], obs[1], obs[2], 1, 1, 1, 0.2, gl.ax1)

@@ -10,6 +10,70 @@ import config_program
 import all_functions as fcn
 import GSO
 
+def deleteStaticTarget(point):
+    pointX, pointY, pointZ = point[0], point[1], point[2]
+
+    for index, x in enumerate(gl.goals):
+        if x[0] == pointX and x[1] == pointY and x[2] == pointZ:
+            gl.goals = np.delete(gl.goals, index, 0)
+            break
+
+    gl.numGoals = len(gl.goals)
+
+
+    if gl.goal[0] == pointX and gl.goal[1] == pointY and gl.goal[2] == pointZ:
+        hyp = []
+        for i in xrange(0, gl.numGoals):
+            gX, gY, gZ = gl.goals[i, 0], gl.goals[i, 1], gl.goals[i, 2]
+            xdist, ydist, zdist = gX - gl.start[0], gY - gl.start[1], gZ - gl.start[2]
+            hyp.append(sqrt(xdist ** 2 + ydist ** 2 + zdist ** 2))
+
+        goalindex = hyp.index(min(hyp))
+        gl.goal = (gl.goals[goalindex, 0], gl.goals[goalindex, 1], gl.goals[goalindex, 2])
+
+    # Plot movement and save figure
+    if makeMovie:
+        fname = ('_tmp%05d.' + gl.imgformat) % gl.stepCount
+        print gl.stepCount, " created"
+        plt.savefig(fname, dpi=gl.dpi, bbox_inches='tight')
+        frames.append(fname)
+        gl.stepCount = gl.stepCount + 1
+
+    if gl.makeFigure:
+        gl.ax1.plot([xOld, xNew], [yOld, yNew], [zOld, zNew], linewidth=2, c='#5DA5DA', zorder=0)
+
+
+def addStaticTarget(point):
+    pointX, pointY, pointZ = point[0], point[1], point[2]
+
+    newgoals = np.zeros((1, 4))
+    newgoals[0, 0], newgoals[0, 1], newgoals[0, 2], newgoals[0, 3] = staticX, staticY, staticZ, fcn.cantor(staticX, staticY, staticZ)
+    gl.goals = np.vstack((gl.goals, newgoals))
+
+    gl.numGoals = len(gl.goals)
+
+    # Finding nearest goal
+    hyp = []
+    for i in xrange(0, gl.numGoals):
+        gX, gY, gZ = gl.goals[i, 0], gl.goals[i, 1], gl.goals[i, 2]
+        xdist, ydist, zdist = gX - gl.start[0], gY - gl.start[1], gZ - gl.start[2]
+        hyp.append(sqrt(xdist ** 2 + ydist ** 2 + zdist ** 2))
+
+    goalindex = hyp.index(min(hyp))
+    gl.goal = (gl.goals[goalindex, 0], gl.goals[goalindex, 1], gl.goals[goalindex, 2])
+
+    # Plot movement and save figure
+    if makeMovie:
+        fname = ('_tmp%05d.' + gl.imgformat) % gl.stepCount
+        print gl.stepCount, " created"
+        plt.savefig(fname, dpi=gl.dpi, bbox_inches='tight')
+        frames.append(fname)
+        gl.stepCount = gl.stepCount + 1
+
+    if gl.makeFigure:
+        gl.ax1.plot([xOld, xNew], [yOld, yNew], [zOld, zNew], linewidth=2, c='#5DA5DA', zorder=0)
+
+
 
 # To reload settings for multiple trials
 if gl.testingMode:
@@ -25,6 +89,13 @@ minObs, maxObs, maxPercent, seedDyn, seedStatic = gl.minObs, gl.maxObs, gl.maxPe
 initX, initY, initZ, T, rXdim, rYdim, rZdim = gl.initX, gl.initY, gl.initZ, gl.T, gl.rXdim, gl.rYdim, gl.rZdim
 rXstart, rYstart, rZstart = gl.rXstart, gl.rYstart, gl.rZstart
 refinementDistance = gl.refinementDistance
+
+T_obs = gl.T_obs
+useMovingObs = gl.useMovingObs
+obsX, obsY, obsZ = gl.obsX , gl.obsY, gl.obsZ
+######################################
+staticX, staticY, staticZ = gl.staticX, gl.staticY, gl.staticZ
+######################################
 
 if makeMovie:   frames = []
 
@@ -66,9 +137,89 @@ for idx in xrange(0, gl.numGoals):                      # for each goal
         validPath = True                    # indicates whether or not path being followed is still valid
 
         while not goalMoved and validPath and gl.start != gl.goal and path:
+            q_time_static = fcn.cantor(staticX, staticY, staticZ)
+
+            highExecuted, lowExecuted = False, False
+            if len(path) >= 2:
+                low, high = np.random.randint(1, len(path), size=2)
+                low, high = min(low, high), max(low, high)
+                flagLowHigh = True
+            else:
+                flagLowHigh = False
 
             # Follow those points until path is invalidated or we reach end of refinement region
+            pathLen = 0
             for point in path:
+                ################################################
+                # Time Varying Goal
+                if flagLowHigh and pathLen == low:
+                    if q_time_static not in gl.goalsVisited:
+                        if q_time_static in gl.goalhandles:
+                            if gl.goalhandles[q_time_static] is not None:
+                                if q_time_static in gl.goalhandles:
+                                    if gl.numGoals > 1:
+                                        gl.goalhandles[q_time_static].remove()
+                                        deleteStaticTarget((staticX, staticY, staticZ))
+                                        lowExecuted = True
+                                    else:
+                                        # Hide Goal
+                                        gl.goalhandles[q_time_static].remove()
+                                        gl.goals = []
+                                        gl.numGoals = 0
+                                        gl.goal = []
+                                        lowExecuted = True
+
+                                        # Halt/ No Operation
+                                        while pathLen != high:
+                                            if makeMovie:
+                                                fname = ('_tmp%05d.' + gl.imgformat) % gl.stepCount
+                                                plt.savefig(fname, dpi=gl.dpi, bbox_inches='tight')
+                                                frames.append(fname)
+                                                gl.stepCount = gl.stepCount + 1
+
+                                            if gl.makeFigure:
+                                                gl.ax1.plot([xOld, xNew], [yOld, yNew], [zOld, zNew], linewidth=2,
+                                                            c='#5DA5DA', zorder=0)
+                                            pathLen = pathLen + 1
+
+                                        # Show Goal
+                                        gl.goalhandles[q_time_static] = gl.ax1.scatter(staticX, staticY, staticZ, c='b')
+
+                                        newgoals = np.zeros((1, 4))
+                                        newgoals[0, 0], newgoals[0, 1], newgoals[0, 2], newgoals[
+                                            0, 3] = staticX, staticY, staticZ, fcn.cantor(staticX, staticY, staticZ)
+                                        gl.goals = newgoals
+
+                                        gl.numGoals = len(gl.goals)
+
+                                        hyp = []
+                                        for i in xrange(0, gl.numGoals):
+                                            gX, gY, gZ = gl.goals[i, 0], gl.goals[i, 1], gl.goals[i, 2]
+                                            xdist, ydist, zdist = gX - gl.start[0], gY - gl.start[1], gZ - gl.start[2]
+                                            hyp.append(sqrt(xdist ** 2 + ydist ** 2 + zdist ** 2))
+
+                                        goalindex = hyp.index(min(hyp))
+                                        gl.goal = (
+                                            gl.goals[goalindex, 0], gl.goals[goalindex, 1], gl.goals[goalindex, 2])
+
+                                        # Plot movement and save figure
+                                        if makeMovie:
+                                            fname = ('_tmp%05d.' + gl.imgformat) % gl.stepCount
+                                            plt.savefig(fname, dpi=gl.dpi, bbox_inches='tight')
+                                            frames.append(fname)
+                                            gl.stepCount = gl.stepCount + 1
+
+                                        if gl.makeFigure:
+                                            gl.ax1.plot([xOld, xNew], [yOld, yNew], [zOld, zNew], linewidth=2,
+                                                        c='#5DA5DA', zorder=0)
+                                        highExecuted = True
+
+                if flagLowHigh and not highExecuted and pathLen == high:
+                    if q_time_static not in gl.goalsVisited:
+                        gl.goalhandles[q_time_static] = gl.ax1.scatter(staticX, staticY, staticZ, c='b')
+                        addStaticTarget((staticX, staticY, staticZ))
+                        highExecuted = True
+                ################################################
 
                 # Save current position, then move to next point
                 xOld, yOld, zOld = xNew, yNew, zNew
@@ -85,7 +236,8 @@ for idx in xrange(0, gl.numGoals):                      # for each goal
                     fname = ('_tmp%05d.'+gl.imgformat) %gl.stepCount
                     plt.savefig(fname,dpi=gl.dpi,bbox_inches='tight')
                     frames.append(fname)
-                    print gl.stepCount," created"
+                    print gl.stepCount, " created"
+                    gl.stepCount = gl.stepCount + 1
                 if gl.makeFigure:
                     gl.ax1.plot([xOld,xNew], [yOld,yNew], [zOld,zNew], linewidth=2, c='#5DA5DA',zorder=0)
 
@@ -101,12 +253,17 @@ for idx in xrange(0, gl.numGoals):                      # for each goal
                 if makeRandObs:
                     fcn.genRandObs(minObs,maxObs,maxPercent,seedDyn)
 
+                # Moving obstacle execution
+                if useMovingObs:
+                    for i in xrange(0, len(obsX)):  obsMoved = fcn.movingObs(obsX[i], obsY[i], obsZ[i], T_obs[i])
+
                 # Moving goal execution
                 if useMovingGoals:
                     for i in xrange(0,len(initX)):  goalMoved = fcn.movingGoal(initX[i], initY[i], initZ[i], T[i])
 
                 # Update counter used for the two preceding functions
-                gl.stepCount += 1
+                if not makeMovie: gl.stepCount += 1
+                pathLen = pathLen + 1
 
                 # Check if there's any obstacles within search radius if we've moved to a different node
                 if gl.oldstart != gl.start and not fcn.searchAndUpdate(xNew, yNew, zNew, path):
@@ -118,8 +275,12 @@ for idx in xrange(0, gl.numGoals):                      # for each goal
                     validPath = False
                     break
 
+            if not highExecuted and lowExecuted and q_time_static not in gl.goalsVisited:
+                gl.goalhandles[q_time_static] = gl.ax1.scatter(staticX, staticY, staticZ, c='b')
+                addStaticTarget((staticX, staticY, staticZ))
+
     if len(gl.goals) > 1:
-        print gl.numGoals - 1, ' goals left...'
+        print(gl.numGoals-1, ' goals left...')
 
         # Identify rows in goals array matching current goal
         k1 = np.where(gl.goals[:,0]==gl.goal[0])
@@ -173,13 +334,13 @@ if makeMovie:
     command = ('mencoder','mf://_tmp*.'+gl.imgformat,'-mf',
            'type='+gl.imgformat+':w=800:h=600:fps='+str(gl.fps),'-ovc',
             'lavc','-lavcopts','vcodec=mpeg4','-oac','copy','-o',gl.vidname+'.avi')
-    subprocess.check_call(command)
-    for fname in frames: os.remove(fname) # remove temporary images
+    # subprocess.check_call(command)
+    # for fname in frames: os.remove(fname) # remove temporary images
 
-    print 'Video complete!'
+    # print 'Video complete!'
 
 if makeFigure:
-    plt.savefig('dstarFig.pdf',bbox_inches='tight')
+    plt.savefig('GSOFig.pdf',bbox_inches='tight')
     print 'Figure is open. Close figure to end script'
     plt.show()
 
@@ -187,5 +348,3 @@ if makeFigure:
 print final_pathX
 print final_pathY
 print final_pathZ
-
-

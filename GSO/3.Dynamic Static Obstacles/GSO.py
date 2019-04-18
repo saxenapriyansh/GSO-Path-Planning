@@ -169,11 +169,11 @@ def run_gso(StartNode, GoalNode):
                 GlobalBest.Position = glowworms[i].Position
 
 
-    print "Global Best Path:", GlobalBest.Position
-    if GlobalBest.Position[-1] == GoalNode:
-        print "Goal reached "
-    else:
-        print "Goal not reached"
+    # print "Global Best Path:", GlobalBest.Position
+    # if GlobalBest.Position[-1] == GoalNode:
+    #     print "Goal reached "
+    # else:
+    #     print "Goal not reached"
 
     # Plot the path in 3D
     # plotPath3D(GlobalBest.Position, GoalNode)

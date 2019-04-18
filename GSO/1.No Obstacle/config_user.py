@@ -13,18 +13,22 @@ makeFigure = True
 makeMovie = True
 startWithEmptyMap = True
 makeRandObs = False
+useMovingObs = False
 useMovingGoals = True
-restrictVerticalMovement = True
+restrictVerticalMovement = False
 useHierarchicalPlanning = True
 numHierLevels = 0
 
+######################################
+staticX, staticY, staticZ = 15, 10, 13
+######################################
 
 percentFixedRandomObstacles = 0
 safetymargin = 1
 cX, cY, cZ = 1, 1, 2        # cX and cY currently are unused - modify computeCost if desired
 heuristicScale = 1.01
 
-searchRadius = 20
+searchRadius = float('inf')
 refinementDistance = math.ceil(searchRadius * 1)    # must be an integer
 t_max = float('inf')             # Max time to spend on path-finding, in milliseconds. Enter inf to prevent restriction
 
@@ -34,13 +38,28 @@ sizeZ = 64
 
 mapscale = 1
 start = (3*mapscale , 3*mapscale, 6*mapscale) # start coordinates
-goals = np.array([[18., 16., 19.,    0.]]) * mapscale # goal coordinates
+goals = np.array([[62., 62., 6., 0.], [staticX, staticY, staticZ, 0.]]) * mapscale  # goal coordinates
 
 # Configure Moving Goals
-initX = [4, 7]# [12, 6]
-initY = [2, 5]#[3, 2]
-initZ = [3, 2]#[4, 7]
-T = [5, 4]#[5, 2]
+initX = [60, 20]#[4, 12]# [7, 6]
+initY = [3, 2]#[2, 3]#[5, 2]
+initZ = [6, 6]#[3, 4]#[2, 7]
+T = [5, 4]#[5, 4]#[5, 2]
+
+# Point Dynamic Obstacles
+# obs = np.array([[56., 26., 6.,    0.]])  * mapscale
+# obsX = [30, 40,10,6,47,25,59]	#[12, 6]
+# obsY = [5, 30,50,6,57,48,9]	#[3, 2]
+# obsZ = [26, 6,50,6,17,28,39]	#[4, 7]
+# T_obs = [3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3,3, 3 , 3, 3, 3]
+obs = np.array([[start[0], start[1], start[2], 0]]) * mapscale
+obsX = []
+obsY = []
+obsZ = []
+T_obs = []
+
+
+
 
 # Fixed Individual Obstacles
 obstacles = []
@@ -59,7 +78,7 @@ rXdim   = []
 rYdim   = []
 rZdim   = []
 
-vidname = 'GSOVid'
+vidname = '1.GSOVid'
 fps = 10                 # higher = faster playback speed
 dpi = 500               # higher = better quality, slower runtime
 imgformat = 'png'       # currently only works for png
@@ -142,6 +161,10 @@ initX = [mapscale*point for point in initX]
 initY = [mapscale*point for point in initY]
 initZ = [mapscale*point for point in initZ]
 
+obsX = [mapscale*point for point in obsX]
+obsY = [mapscale*point for point in obsY]
+obsZ = [mapscale*point for point in obsZ]
+
 rXstart = [mapscale*(point) for point in rXstart if point >= 1]
 rYstart = [mapscale*(point) for point in rYstart if point >= 1]
 rZstart = [point for point in rZstart if point >= 1]
@@ -181,6 +204,7 @@ oldstart = None
 
 
 # Set up UAV map and plot
+# map_ = collections.defaultdict(lambda : 0)
 keys = []
 for i in range(sizeX * mapscale):
     for j in range(sizeY * mapscale):

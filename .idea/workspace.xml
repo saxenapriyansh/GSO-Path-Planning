@@ -2,25 +2,290 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c7e803-1d92-4b74-bdaf-f26bdd95e736" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/GSO/.idea/GSO-Refactored.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/GSO.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/all_functions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/calc_turns.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/changePath.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/collisionTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/config_program.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/config_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/getPath.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/main_gso.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/neighbours.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/pdist2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/plotPath3D.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GSO/removeLoops.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/.idea/GSO-Refactored.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/.idea/GSO-Refactored.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00001.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00002.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00003.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00004.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00005.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00006.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00007.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00008.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00009.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00009.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00010.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00011.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00011.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00012.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00013.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00013.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00014.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00015.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00015.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00016.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00016.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00017.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00017.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00018.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00018.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00019.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00019.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00020.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00020.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00021.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00021.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00022.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00022.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00023.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00023.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00024.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00025.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00025.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00026.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00026.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00027.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00027.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00028.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00028.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00029.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00029.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00030.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00030.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00031.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00031.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00032.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00032.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00033.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00033.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00034.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00034.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00035.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00035.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00036.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00036.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00037.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00037.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00038.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00038.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00039.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00039.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00040.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00040.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00041.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00041.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00042.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00042.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00043.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00043.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00044.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00044.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00045.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00045.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00046.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00046.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00047.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00047.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00048.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00048.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00049.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00049.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00050.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00050.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00051.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00051.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00052.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00052.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00053.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00053.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00054.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00054.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00055.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00055.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00056.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00056.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00057.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00057.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00058.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00058.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00059.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00059.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00060.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00060.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00061.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00061.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00062.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00062.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00063.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00063.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00064.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00064.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00065.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00065.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00066.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00066.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00067.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00067.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00068.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00068.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00069.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00069.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00070.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00070.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00071.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00071.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00072.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00072.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00073.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00073.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00074.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00074.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00075.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00075.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00076.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00076.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00077.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00077.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00078.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00078.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00079.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00079.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00080.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00080.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00081.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00081.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00082.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00082.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00083.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00083.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00084.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00084.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00085.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00085.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00086.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00086.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00087.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00087.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00088.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00088.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00089.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00089.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00090.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00090.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00091.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00091.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00092.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00092.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00093.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00093.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00094.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00094.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00095.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00095.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00096.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00096.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00097.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00097.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00098.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00098.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00099.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00099.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00100.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00101.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00101.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00102.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00102.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00103.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00103.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00104.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00104.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00105.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00105.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00106.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00106.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00107.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00107.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00108.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00108.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00109.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00109.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00110.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00110.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00111.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00111.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00112.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00112.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00113.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00113.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00114.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00114.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00115.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00115.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00116.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00116.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00117.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00117.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00118.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00118.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00119.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00119.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00120.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00120.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00121.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00121.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00122.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00122.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00123.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00123.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00124.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00124.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00125.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00125.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00126.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00126.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00127.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00127.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00128.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00129.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00129.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00130.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00130.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00131.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00131.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00132.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00132.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00133.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00133.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00134.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00134.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00135.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00135.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00136.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00136.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00137.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00137.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00138.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00138.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00139.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00139.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00140.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00140.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00141.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00141.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00142.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00142.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00143.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00143.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00144.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00144.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00145.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00145.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00146.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00146.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00147.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00147.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00148.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00148.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00149.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00149.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00150.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00150.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00151.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00151.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00152.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00152.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00153.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00153.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00154.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00154.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00155.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00155.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00156.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00156.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00157.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00157.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00158.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00158.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00159.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00159.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00160.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00160.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00161.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00161.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00162.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00162.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00163.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00163.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00164.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00164.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00165.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00165.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00166.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00166.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00167.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00167.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00168.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00168.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00169.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00169.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00170.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00170.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00171.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00171.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00172.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00172.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00173.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00173.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00174.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00174.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00175.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00175.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00176.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00176.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00177.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00177.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00178.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00178.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00179.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00179.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00180.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00180.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00181.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00181.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00182.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00182.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00183.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00183.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00184.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00184.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00185.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00185.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00186.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00186.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00187.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00187.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00188.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00188.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00189.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00189.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00190.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00190.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00191.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00191.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00192.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00193.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00193.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00194.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00194.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00195.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00195.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00196.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00196.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00197.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00197.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00198.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00198.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00199.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00199.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00200.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00201.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00201.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00202.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00202.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00203.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00203.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00204.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00204.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00205.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00205.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00206.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00206.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00207.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00207.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00208.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00208.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00209.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00209.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00210.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00210.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00211.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00211.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00212.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00212.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00213.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00213.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00214.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00214.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00215.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00215.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00216.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00216.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00217.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00217.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00218.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00218.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00219.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00219.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00220.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00220.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00221.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00221.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00222.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00222.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00223.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00223.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00224.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00224.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00225.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00225.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00226.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00226.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00227.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00227.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00228.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00228.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00229.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00229.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00230.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00230.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00231.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00231.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00232.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00232.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00233.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00233.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00234.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00234.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00235.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00235.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00236.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00236.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00237.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00237.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00238.png" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/_tmp00238.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/all_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/all_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/config_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/config_program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/config_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/config_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/dstarFig.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/GSO-Refactored.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/GSO-Refactored.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/GSO.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/GSO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/all_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/all_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/config_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/config_program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/config_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/config_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/2.Static Obstacle/main_gso.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/2.Static Obstacle/main_gso.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/GSO-Refactored.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/GSO-Refactored.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/GSO.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/GSO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/all_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/all_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/config_program.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/config_program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/config_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/config_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/main_gso.py" beforeDir="false" afterPath="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles/main_gso.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/.idea/GSO-Refactored.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/GSO.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/all_functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/calc_turns.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/changePath.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/collisionTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/config_program.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/config_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/getPath.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/main_gso.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/neighbours.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/pdist2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/plotPath3D.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GSO/4.Time-varying Obstacles/removeLoops.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +298,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/GSO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="518">
+              <caret line="152" selection-start-line="152" selection-end-line="152" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -42,9 +308,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py">
+        <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/config_program.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="55">
+              <caret line="134" column="56" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="56" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -53,11 +320,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/config_program.py">
+        <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1938">
+              <caret line="172" column="40" selection-start-line="172" selection-start-column="40" selection-end-line="172" selection-end-column="40" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#278#1446#0" />
+                <element signature="e#1478#2598#0" />
               </folding>
             </state>
           </provider>
@@ -65,13 +335,47 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/config_user.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="231" column="53" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="53" />
+              <folding>
+                <element signature="e#21#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>goals</find>
+      <find>goal</find>
+      <find>SIZEX</find>
+      <find>GOA</find>
+      <find>command</find>
+      <find>movinggoal</find>
+      <find>fps</find>
+      <find>modifyi</find>
+      <find>pdf</find>
+      <find>%d</find>
+      <find>%d</find>
+      <find>start</find>
+      <find>Nodes to delete when on a boundary</find>
+      <find>Generate plot with start and goal nodes</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/GSO/1.No Obstacle/all_functions.py" />
+        <option value="$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py" />
+        <option value="$PROJECT_DIR$/GSO/1.No Obstacle/config_user.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -83,9 +387,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="12" />
-    <option name="width" value="768" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -119,7 +423,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GSO/3.Dynamic Static Obstacles" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -133,6 +438,34 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="main_gso" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="GSO-Path-Planning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GSO/1.No Obstacle" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main_gso" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -160,8 +493,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.54664487" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3242349" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -170,36 +503,85 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GSO/1.No Obstacle/GSO.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://C:/Python27/Lib/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/all_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="1083" column="23" selection-start-line="1083" selection-start-column="23" selection-end-line="1083" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#10425#11499#0" />
+            <element signature="e#10792#12229#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/changePath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/GSO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="518">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py">
+    <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/config_program.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="55">
+          <caret line="134" column="56" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="56" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/config_program.py">
+    <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/main_gso.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="1938">
+          <caret line="172" column="40" selection-start-line="172" selection-start-column="40" selection-end-line="172" selection-end-column="40" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#278#1446#0" />
+            <element signature="e#1478#2598#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GSO/1.No Obstacle/config_user.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="231" column="53" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="53" />
+          <folding>
+            <element signature="e#21#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
